@@ -1,0 +1,99 @@
+{
+  "version": 1,
+  "exportedAt": "2026-01-15T01:51:44.543Z",
+  "data": {
+    "business_name": "Tru-Blue Pressure Washing",
+    "tagline": "Quality Pressure Washing Services",
+    "logo": "images/tru-blue-logo__cropped.jpg",
+    "favicon": "images/tru-blue-pressure-washing-favicon.png",
+    "phone": "0421 958 213",
+    "email": "trubluepressurewashing@gmail.com",
+    "address": "Ipswich, QLD, Australia",
+    "abn": "12 345 678 910",
+    "qbcc": "",
+    "facebook": "https://www.facebook.com/profile.php?id=61584757976419",
+    "instagram": "",
+    "color_palette": [
+      "#e17a2d",
+      "#ffffff",
+      "#1f2937",
+      "#0a3f55",
+      "#ffffff",
+      "#ffffff",
+      "#1f2937",
+      "#0a3f55"
+    ],
+    "font_theme": {
+      "heading": "Montserrat",
+      "body": "Open Sans"
+    },
+    "template_theme": "wiper",
+    "hero_headline": "Revitalize Your Property with Tru-Blue Pressure Washing",
+    "hero_description": "Expert pressure and soft washing services for your home and outdoor spaces.",
+    "hero_cta": "Get a Free Quote",
+    "hero_image": "images/beautiful-driveway-2.jpg",
+    "about_headline": "About Tru-Blue Pressure Washing",
+    "about_text": "At Tru-Blue Pressure Washing, we pride ourselves on delivering high-quality pressure washing services at competitive prices. Our team is dedicated to making your property shine, whether it's your home, driveway, or patio. Servicing Ipswich and surrounding suburbs, we are your local experts.",
+    "about_image": "images/nice-driveway.jpg",
+    "services_headline": "Our Services",
+    "services_text": "We offer a range of pressure washing services to meet your needs.",
+    "services": [
+      {
+        "title": "Exterior House & Hard Surface Cleaning",
+        "description": "Comprehensive cleaning of your home’s exterior surfaces to instantly boost curb appeal. Includes house exteriors, driveways, pathways, patios, alfrescos and pool surrounds — removing built-up dirt, grime, oil stains and moss for a fresh, like-new finish.",
+        "icon_svg": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg width=\"48px\" height=\"48px\" stroke-width=\"1.4\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" color=\"#0a3f55\"><path d=\"M9 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21H15M9 21V17C9 15.3431 10.3431 14 12 14V14C13.6569 14 15 15.3431 15 17V21M9 21H15\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>"
+      },
+      {
+        "title": "Driveway, Pathway & Access Cleaning",
+        "description": "High-pressure cleaning for driveways, paths and walkways to remove dirt, stains and slippery buildup. Improves appearance while making access areas safer and easier to maintain.",
+        "icon_svg": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg width=\"48px\" height=\"48px\" stroke-width=\"1.4\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" color=\"#0a3f55\"><path d=\"M8 10L16 10\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M7 14L8 14\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M16 14L17 14\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M3 18V11.4105C3 11.1397 3.05502 10.8716 3.16171 10.6227L5.4805 5.21216C5.79566 4.47679 6.51874 4 7.31879 4H16.6812C17.4813 4 18.2043 4.47679 18.5195 5.21216L20.8383 10.6227C20.945 10.8716 21 11.1397 21 11.4105V18M3 18V20.4C3 20.7314 3.26863 21 3.6 21H6.4C6.73137 21 7 20.7314 7 20.4V18M3 18H7M21 18V20.4C21 20.7314 20.7314 21 20.4 21H17.6C17.2686 21 17 20.7314 17 20.4V18M21 18H17M7 18H17\" stroke=\"#0a3f55\" stroke-width=\"1.4\"></path></svg>"
+      },
+      {
+        "title": "Deck & Outdoor Living Area Cleaning",
+        "description": "Specialised cleaning for timber decks, pool decks and outdoor entertaining areas. Uses gentle soft-washing techniques where required to protect surfaces while restoring their natural look and keeping spaces clean, safe and inviting.",
+        "icon_svg": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><svg width=\"48px\" height=\"48px\" stroke-width=\"1.4\" viewBox=\"0 0 24 24\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\" color=\"#0a3f55\"><path d=\"M6 13C4.33333 13 1 14 1 18C1 22 4.33333 23 6 23H18C19.6667 23 23 22 23 18C23 14 19.6667 13 18 13\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M19 9L20 9\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M12 2V1\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M18.5 3.5L17.5 4.5\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M5.5 3.5L6.5 4.5\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path><path d=\"M4 9L5 9\" stroke=\"#0a3f55\" stroke-width=\"1.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg>",
+        "image": ""
+      }
+    ],
+    "experience_headline": "Why Choose Us?",
+    "experience_text": "We combine expertise, quality, and affordability to deliver the best pressure washing services.",
+    "experience_image": null,
+    "experience_bullets": [
+      "Experienced and professional team",
+      "High-quality equipment and eco-friendly products",
+      "Competitive pricing and free quotes",
+      "Satisfaction guaranteed"
+    ],
+    "experience_summary": "Tru-Blue Pressure Washing is dedicated to providing exceptional service and results.",
+    "cta_headline": "Ready to Transform Your Space?",
+    "cta_text": "Contact us today for a free quote!",
+    "cta_btn": "Get Quote",
+    "contact_form_upload": false,
+    "testimonials": [
+      {
+        "text": "Fantastic job on my driveway! Highly recommend.",
+        "name": "John Smith - Ipswich"
+      },
+      {
+        "text": "My patio looks brand new! Great service.",
+        "name": "Sarah Johnson - Springfield"
+      },
+      {
+        "text": "Professional and friendly team. Will use again!",
+        "name": "Michael Brown - Redbank Plains"
+      }
+    ],
+    "enable_gallery": false,
+    "gallery_headline": "Our Work",
+    "gallery_text": "Check out some of our recent projects.",
+    "gallery_images": [],
+    "before_after_headline": "Before & After",
+    "before_after_text": "See the difference we can make!",
+    "before_image": "images/swim-school-driveway-before.jpg",
+    "after_image": "images/swim-school-driveway.jpg",
+    "repo_name": "trublue-pressure-washing",
+    "site_url": "https://trubluepressurewashing.com.au",
+    "tk_plus": true,
+    "custom_css": ""
+  }
+}

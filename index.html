@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en" x-data="{ menuOpen: false }" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Tru-Blue Pressure Washing | Quality Pressure Washing Services</title>
+    <meta name="description" content="At Tru-Blue Pressure Washing, we pride ourselves on delivering high-quality pressure washing services at competitive prices. Our team is dedicated to making your property shine, whether it's your home, driveway, or patio. Servicing Ipswich and surrounding suburbs, we are your local experts." />
+
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="images/beautiful-driveway-2.jpg">
+
+    <!-- Canonical URL (optional) -->
+    <link rel="canonical" href="https://trubluepressurewashing.com.au" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tru-Blue Pressure Washing | Quality Pressure Washing Services" />
+    <meta property="og:description" content="At Tru-Blue Pressure Washing, we pride ourselves on delivering high-quality pressure washing services at competitive prices. Our team is dedicated to making your property shine, whether it's your home, driveway, or patio. Servicing Ipswich and surrounding suburbs, we are your local experts." />
+    <meta property="og:image" content="https://trubluepressurewashing.com.au/images/beautiful-driveway-2.jpg" />
+    <meta property="locale" content="EN_AU" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tru-Blue Pressure Washing | Quality Pressure Washing Services" />
+    <meta name="twitter:description" content="At Tru-Blue Pressure Washing, we pride ourselves on delivering high-quality pressure washing services at competitive prices. Our team is dedicated to making your property shine, whether it's your home, driveway, or patio. Servicing Ipswich and surrounding suburbs, we are your local experts." />
+    <meta name="twitter:image" content="https://trubluepressurewashing.com.au/images/beautiful-driveway-2.jpg" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="ico" href="https://trubluepressurewashing.com.au/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="https://trubluepressurewashing.com.au/images/tru-blue-pressure-washing-favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://trubluepressurewashing.com.au/images/tru-blue-pressure-washing-favicon.png" />
+    <meta name="msapplication-TileImage" content="https://trubluepressurewashing.com.au/images/tru-blue-pressure-washing-favicon.png" />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#e17a2d" />
+
+    <meta name="robots" content="index, follow" />
+    <meta name="generator" content="TradeKick" />
+
+    <!-- LocalBusiness Schema -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "Tru-Blue Pressure Washing",
+            "description": "At Tru-Blue Pressure Washing, we pride ourselves on delivering high-quality pressure washing services at competitive prices. Our team is dedicated to making your property shine, whether it's your home, driveway, or patio. Servicing Ipswich and surrounding suburbs, we are your local experts.",
+            "telephone": "0421 958 213",
+            "email": "trubluepressurewashing@gmail.com",
+            "address": "Ipswich, QLD, Australia",
+            "url": "https://trubluepressurewashing.com.au",
+            "image": "images/beautiful-driveway-2.jpg"
+        }
+    </script>
+
+    <!-- Tailwind + Alpine -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+    <!-- Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;500&display=swap"
+        rel="stylesheet" />
+
+    <!-- Global Styles -->
+    <style>
+        body {
+            font-family: 'Open Sans',
+            sans-serif;
+            background-color: var(--color-bg);
+            color: var(--color-text);
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5 {
+            font-family: 'Montserrat',
+            sans-serif;
+        }
+
+        .font-heading {
+            font-family: 'Montserrat',
+            sans-serif;
+        }
+
+        a {
+            color: var(--color-primary);
+        }
+
+        a:hover {
+            opacity: 0.9;
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: #fff;
+        }
+
+        .btn-primary:hover {
+            filter: brightness(0.9);
+        }
+
+        .btn-outline {
+            background-color: #fff;
+            color: var(--color-primary);
+        }
+
+        .btn-outline:hover {
+            background-color: #f9fafb;
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity .8s ease, transform .8s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        header.has-logo .header-business-name {
+            display: none;
+        }
+
+        header.has-no-logo .header-business-logo {
+            display: none;
+        }
+
+        .slider {
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .slide {
+            scroll-snap-align: start;
+            flex: 0 0 46%;
+            margin-right: 2%;
+        }
+
+        @media (max-width: 768px) {
+            .slide {
+                flex: 0 0 85%;
+                margin-right: 5%;
+            }
+        }
+
+        .gallery-slider {
+            scroll-padding-left: 1rem;
+        }
+
+        .gallery-slide {
+            flex: 0 0 75%;
+            scroll-snap-align: center;
+        }
+
+        @media (min-width: 640px) {
+            .gallery-slide {
+                flex-basis: 55%;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .gallery-slider {
+                scroll-snap-type: none;
+            }
+
+            .gallery-slide {
+                flex: initial;
+                scroll-snap-align: unset;
+            }
+        }
+
+        .nav-underline-thick {
+            position: relative;
+        }
+
+        .nav-underline-thick::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -4px;
+            /* distance below text */
+            width: 100%;
+            height: 3px;
+            /* thickness */
+            background-color: var(--color-primary);
+            border-radius: 2px;
+        }
+
+        .gallery-tile {
+            border: none;
+            background: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            cursor: pointer;
+        }
+
+        body.gallery-lightbox-open {
+            overflow: hidden;
+        }
+
+        .gallery-lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+            z-index: 999;
+        }
+
+        .gallery-lightbox.is-active {
+            opacity: 1;
+            pointer-events: auto;
+        }
+
+        .gallery-lightbox__img {
+            max-width: min(90vw, 1100px);
+            max-height: 85vh;
+            border-radius: 1rem;
+            box-shadow: 0 25px 60px rgba(15, 23, 42, 0.35);
+            object-fit: contain;
+            background: #0f172a;
+        }
+
+        .gallery-lightbox__close,
+        .gallery-lightbox__nav {
+            position: absolute;
+            border: none;
+            color: #fff;
+            background: rgba(15, 23, 42, 0.65);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            cursor: pointer;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 999px;
+            transition: background 0.2s ease, transform 0.2s ease;
+        }
+
+        .gallery-lightbox__close {
+            top: 1.25rem;
+            right: 1.25rem;
+            width: 2.75rem;
+            height: 2.75rem;
+            font-size: 1.4rem;
+            line-height: 1;
+        }
+
+        .gallery-lightbox__nav {
+            top: 50%;
+            width: 3rem;
+            height: 3rem;
+            transform: translateY(-50%);
+            font-size: 1.25rem;
+        }
+
+        .gallery-lightbox__nav--prev {
+            left: 1.5rem;
+        }
+
+        .gallery-lightbox__nav--next {
+            right: 1.5rem;
+        }
+
+        .gallery-lightbox__counter {
+            position: absolute;
+            bottom: 1.25rem;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #fff;
+            font-size: 0.85rem;
+            letter-spacing: 0.2em;
+        }
+
+        .gallery-lightbox__close:hover,
+        .gallery-lightbox__nav:hover {
+            background: rgba(15, 23, 42, 0.85);
+        }
+
+        @media (max-width: 640px) {
+            .gallery-lightbox__nav {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+
+            .gallery-lightbox__nav--prev {
+                left: 0.75rem;
+            }
+
+            .gallery-lightbox__nav--next {
+                right: 0.75rem;
+            }
+        }
+
+        /* User provided overrides */
+        
+    </style>
+</head>
+
+
+<body
+    style="--color-primary: #e17a2d; --color-bg: #ffffff; --color-text: #1f2937; --color-footer: #0a3f55; --color-footer-text: #ffffff; --color-standout-bg: #ffffff; --color-standout-text: #1f2937">
+
+    <!-- ===========================
+         Header – "Wiper" Template
+    ============================ -->
+    <header
+        class="has-logo sticky top-0 w-full z-50 bg-white text-[var(--color-primary)] shadow-sm transition-shadow duration-300">
+
+        <div class="max-w-6xl mx-auto px-4 lg:px-6">
+
+            <!-- Mobile Header -->
+            <div class="flex items-center justify-between py-3 md:py-4 lg:hidden">
+
+                <!-- Logo + Name (left on mobile) -->
+                <div class="flex items-center gap-3 min-w-0">
+                    <img class="header-business-logo h-[5rem] w-auto object-contain flex-shrink-0" src="images/tru-blue-logo__cropped.jpg"
+                        alt="Tru-Blue Pressure Washing" />
+                    <h1 class="header-business-name font-semibold text-base md:text-lg truncate">
+                        Tru-Blue Pressure Washing
+                    </h1>
+                </div>
+
+                <!-- Right side: Quote + Burger -->
+                <div class="flex items-center gap-3">
+                    <!-- Mobile Quote -->
+                    <a href="#contact"
+                        class="bg-[var(--color-primary)] text-white font-semibold px-3 py-1.5 rounded-full text-xs uppercase tracking-wide shadow">
+                        Get a Quote
+                    </a>
+
+                    <!-- Hamburger -->
+                    <button @click="menuOpen = !menuOpen"
+                        class="inline-flex items-center justify-center rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]/60">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path x-show="!menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                            <path x-show="menuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Desktop Header: Logo Left, Menu Right -->
+            <div class="hidden lg:flex items-center justify-between py-2 md:py-2 gap-10">
+
+                <!-- Logo + Business Name -->
+                <div class="flex items-center gap-4 min-w-0">
+                    <img class="header-business-logo h-[5rem] w-auto object-contain" src="images/tru-blue-logo__cropped.jpg"
+                        alt="Tru-Blue Pressure Washing" />
+                </div>
+
+                <!-- Navigation + CTA -->
+                <div class="flex items-center gap-8">
+                    <nav class="flex items-center space-x-8 capitalize tracking-[0.1em]">
+                        <a href="#services"
+                            class="text-[var(--color-text)] hover:text-[var(--color-text)]/90">Services</a>
+                        <a href="#about" class="text-[var(--color-text)] hover:text-[var(--color-text)]/90">About</a>
+                        <a href="#experience"
+                            class="text-[var(--color-text)] hover:text-[var(--color-text)]/90">Experience</a>
+                        <a href="#testimonials"
+                            class="text-[var(--color-text)] hover:text-[var(--color-text)]/90">Testimonials</a>
+                        <a href="#contact"
+                            class="text-[var(--color-text)] hover:text-[var(--color-text)]/90">Contact</a>
+                    </nav>
+
+                    <!-- CTA -->
+                    <a href="#contact"
+                        class="bg-[var(--color-primary)] text-white hover:bg-[var(--color-primary)]/90 px-5 py-2 rounded-full capitalize tracking-wide shadow-md inline-flex items-center">
+                        <span class="mr-2 inline-flex h-9 w-9 items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.518 4.554a1 1 0 01-.272 1.045l-2.12 2.12a16.001 16.001 0 007.07 7.07l2.12-2.12a1 1 0 011.045-.272l4.554 1.518a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C10.477 21 3 13.523 3 4V5z" />
+                            </svg>
+                        </span>
+                        0421 958 213
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div x-show="menuOpen" x-transition
+            class="lg:hidden border-t border-gray-200 bg-white text-[var(--color-primary)] shadow-md">
+            <nav class="flex flex-col p-4 space-y-3 text-sm font-medium">
+                <a href="#services" @click="menuOpen=false" class="hover:text-[var(--color-primary)]/80">Services</a>
+                <a href="#about" @click="menuOpen=false" class="hover:text-[var(--color-primary)]/80">About</a>
+                <a href="#experience" @click="menuOpen=false"
+                    class="hover:text-[var(--color-primary)]/80">Experience</a>
+                <a href="#testimonials" @click="menuOpen=false"
+                    class="hover:text-[var(--color-primary)]/80">Testimonials</a>
+                <a href="#contact" @click="menuOpen=false" class="hover:text-[var(--color-primary)]/80">Contact</a>
+
+                <a href="tel:0421 958 213"
+                    class="mt-3 bg-[var(--color-primary)] text-white text-center px-4 py-2 rounded-full text-sm font-semibold">
+                    Call 0421 958 213
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===========================
+         HERO
+    ============================ -->
+    <section id="home" class="relative min-h-[80vh] flex items-center bg-cover bg-center"
+        style="background-image: url('images/beautiful-driveway-2.jpg');">
+        <!-- Gradient overlay -->
+        <div class="absolute inset-0 bg-black/60">
+        </div>
+
+        <div class="relative z-10 w-full">
+            <div class="max-w-6xl mx-auto px-4 lg:px-6 py-16 md:py-16">
+                <div class="max-w-3xl mx-auto">
+
+                    <h1
+                        class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-6xl font-bold leading-tight text-white mb-5 md:mb-6">
+                        Revitalize Your Property with Tru-Blue Pressure Washing
+                    </h1>
+                    <p class="text-center text-lg md:text-xl text-gray-100/95 mb-8">
+                        Expert pressure and soft washing services for your home and outdoor spaces.
+                    </p>
+
+                    <div class="flex flex-wrap items-center justify-center gap-4">
+                        <a href="#contact"
+                            class="btn-primary px-7 py-3 md:px-9 md:py-3 rounded-full text-sm md:text-base font-semibold uppercase tracking-wide shadow-lg">
+                            Get a Free Quote
+                        </a>
+                        <a href="tel:0421 958 213"
+                            class="inline-flex items-center text-sm md:text-base font-medium text-white hover:opacity-80">
+                            <span
+                                class="mr-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/5 backdrop-blur-sm">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.518 4.554a1 1 0 01-.272 1.045l-2.12 2.12a16.001 16.001 0 007.07 7.07l2.12-2.12a1 1 0 011.045-.272l4.554 1.518a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C10.477 21 3 13.523 3 4V5z" />
+                                </svg>
+                            </span>
+                            <span>Or call 0421 958 213</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         Services
+    ============================ -->
+    <section id="services" class="pt-10 pb-12 md:pt-14 md:pb-20 fade-in"
+        style="background-color: var(--color-bg); color: var(--color-text);">
+        <div class="max-w-6xl mx-auto px-4 lg:px-6">
+            <div class="gap-6 mb-10 text-center">
+
+                <h2 class="text-3xl md:text-4xl font-bold mb-3" style="color: var(--color-primary);">
+                    Our Services
+                </h2>
+
+                <p class="max-w-xl text-sm md:text-base opacity-80 mx-auto">
+                    From small maintenance jobs to larger projects, we offer reliable, trade-quality services with
+                    clear communication from start to finish.
+                </p>
+            </div>
+
+            <div
+                class="relative rounded-3xl bg-gradient-to-br from-[var(--color-standout-bg)]/15 via-white to-[var(--color-standout-bg)]/5 p-6 md:p-8 md:px-0">
+
+                <div class="grid gap-6 md:gap-8 relative grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+                    
+        <div class="rounded-2xl border border-gray-200/70 bg-white/90 backdrop-blur-sm text-[var(--color-text)] shadow-sm hover:shadow-lg transition p-6 flex flex-col">
+            <div class="mb-4 flex justify-start text-[var(--color-primary)] items-center h-10 overflow-hidden">
+                <?xml version="1.0" encoding="UTF-8"?><svg width="48px" height="48px" stroke-width="1.4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#0a3f55"><path d="M9 21H7C4.79086 21 3 19.2091 3 17V10.7076C3 9.30887 3.73061 8.01175 4.92679 7.28679L9.92679 4.25649C11.2011 3.48421 12.7989 3.48421 14.0732 4.25649L19.0732 7.28679C20.2694 8.01175 21 9.30887 21 10.7076V17C21 19.2091 19.2091 21 17 21H15M9 21V17C9 15.3431 10.3431 14 12 14V14C13.6569 14 15 15.3431 15 17V21M9 21H15" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 tracking-wide">
+                Exterior House & Hard Surface Cleaning
+            </h3>
+            <p class="text-sm md:text-base flex-1 opacity-90">
+                Comprehensive cleaning of your home’s exterior surfaces to instantly boost curb appeal. Includes house exteriors, driveways, pathways, patios, alfrescos and pool surrounds — removing built-up dirt, grime, oil stains and moss for a fresh, like-new finish.
+            </p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200/70 bg-white/90 backdrop-blur-sm text-[var(--color-text)] shadow-sm hover:shadow-lg transition p-6 flex flex-col">
+            <div class="mb-4 flex justify-start text-[var(--color-primary)] items-center h-10 overflow-hidden">
+                <?xml version="1.0" encoding="UTF-8"?><svg width="48px" height="48px" stroke-width="1.4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#0a3f55"><path d="M8 10L16 10" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M7 14L8 14" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M16 14L17 14" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M3 18V11.4105C3 11.1397 3.05502 10.8716 3.16171 10.6227L5.4805 5.21216C5.79566 4.47679 6.51874 4 7.31879 4H16.6812C17.4813 4 18.2043 4.47679 18.5195 5.21216L20.8383 10.6227C20.945 10.8716 21 11.1397 21 11.4105V18M3 18V20.4C3 20.7314 3.26863 21 3.6 21H6.4C6.73137 21 7 20.7314 7 20.4V18M3 18H7M21 18V20.4C21 20.7314 20.7314 21 20.4 21H17.6C17.2686 21 17 20.7314 17 20.4V18M21 18H17M7 18H17" stroke="#0a3f55" stroke-width="1.4"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 tracking-wide">
+                Driveway, Pathway & Access Cleaning
+            </h3>
+            <p class="text-sm md:text-base flex-1 opacity-90">
+                High-pressure cleaning for driveways, paths and walkways to remove dirt, stains and slippery buildup. Improves appearance while making access areas safer and easier to maintain.
+            </p>
+        </div>
+
+        <div class="rounded-2xl border border-gray-200/70 bg-white/90 backdrop-blur-sm text-[var(--color-text)] shadow-sm hover:shadow-lg transition p-6 flex flex-col">
+            <div class="mb-4 flex justify-start text-[var(--color-primary)] items-center h-10 overflow-hidden">
+                <?xml version="1.0" encoding="UTF-8"?><svg width="48px" height="48px" stroke-width="1.4" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" color="#0a3f55"><path d="M6 13C4.33333 13 1 14 1 18C1 22 4.33333 23 6 23H18C19.6667 23 23 22 23 18C23 14 19.6667 13 18 13" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 12C13.6569 12 15 10.6569 15 9C15 7.34315 13.6569 6 12 6C10.3431 6 9 7.34315 9 9C9 10.6569 10.3431 12 12 12Z" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M19 9L20 9" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M12 2V1" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M18.5 3.5L17.5 4.5" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M5.5 3.5L6.5 4.5" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path><path d="M4 9L5 9" stroke="#0a3f55" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+            </div>
+            <h3 class="text-lg font-semibold mb-2 tracking-wide">
+                Deck & Outdoor Living Area Cleaning
+            </h3>
+            <p class="text-sm md:text-base flex-1 opacity-90">
+                Specialised cleaning for timber decks, pool decks and outdoor entertaining areas. Uses gentle soft-washing techniques where required to protect surfaces while restoring their natural look and keeping spaces clean, safe and inviting.
+            </p>
+        </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-1">
+                <a href="#contact"
+                    class="btn-primary px-6 py-3 rounded-full text-sm md:text-md font-semibold uppercase tracking-wide inline-flex items-center">
+                    Get a Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="before-after" class="before-after-section py-12 md:py-20 fade-in" style="background: var(--color-bg); color: var(--color-text);">
+    <style>
+        .before-after-compare {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            border-radius: 24px;
+            aspect-ratio: 16 / 9;
+            background: #0f172a;
+            --position: 50%;
+        }
+        .before-after-image {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .before-after-resize {
+            position: absolute;
+            inset: 0;
+            width: var(--position);
+            overflow: hidden;
+        }
+        .before-after-handle {
+            position: absolute;
+            top: 0;
+            left: var(--position);
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #fff;
+            box-shadow: 0 0 0 1px rgba(15, 23, 42, 0.25);
+            pointer-events: none;
+        }
+        .before-after-handle::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 36px;
+            height: 36px;
+            transform: translate(-50%, -50%);
+            border-radius: 999px;
+            background: #fff;
+            border: 3px solid rgba(15, 23, 42, 0.9);
+            box-shadow: 0 6px 20px rgba(15, 23, 42, 0.3);
+        }
+        .before-after-slider {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            cursor: ew-resize;
+        }
+        .before-after-labels {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            padding: 16px;
+            pointer-events: none;
+            font-size: 12px;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        .before-after-labels span {
+            background: rgba(15, 23, 42, 0.65);
+            padding: 6px 10px;
+            border-radius: 999px;
+        }
+    </style>
+    <div class="max-w-6xl mx-auto px-4 lg:px-6">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-primary)]">
+                Before & After
+            </h2>
+            <p class="text-[var(--color-text)] max-w-2xl mx-auto text-sm md:text-base opacity-90">
+                See the difference we can make!
+            </p>
+        </div>
+        <div class="before-after-compare" style="--position: 50%;">
+            <img class="before-after-image" src="images/swim-school-driveway.jpg" alt="After image" loading="lazy" />
+            <div class="before-after-resize">
+                <img class="before-after-image" src="images/swim-school-driveway-before.jpg" alt="Before image" loading="lazy" />
+            </div>
+            <input class="before-after-slider" type="range" min="0" max="100" value="50" aria-label="Before and after slider" oninput="this.parentElement.style.setProperty('--position', this.value + '%')" />
+            <span class="before-after-handle" aria-hidden="true"></span>
+            <div class="before-after-labels" aria-hidden="true">
+                <span>Before</span>
+                <span>After</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- ===========================
+         About
+    ============================ -->
+    <section id="about" class="relative py-16 md:py-24 fade-in text-white overflow-hidden"
+        style="background-image: url('images/nice-driveway.jpg'); background-size: cover; background-position: center; background-attachment: fixed;">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative z-10 max-w-3xl mx-auto px-4 lg:px-6 text-center space-y-6">
+            <h2 class="text-3xl md:text-4xl">
+                About Tru-Blue Pressure Washing
+            </h2>
+            <p class="text-base md:text-lg leading-relaxed text-gray-100/90">
+                At Tru-Blue Pressure Washing, we pride ourselves on delivering high-quality pressure washing services at competitive prices. Our team is dedicated to making your property shine, whether it's your home, driveway, or patio. Servicing Ipswich and surrounding suburbs, we are your local experts.
+            </p>
+            <div>
+                <a href="#contact"
+                    class="inline-flex items-center justify-center px-8 py-3 rounded-full text-sm md:text-base font-semibold uppercase tracking-wide bg-[var(--color-primary)] text-white shadow-lg hover:bg-[var(--color-primary)]/90">
+                    Get a Free Quote
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-gallery py-16 md:py-20 bg-white/5" style="display: none;">
+    <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-text)]">Our Work</h2>
+            <p class="text-gray-500 text-sm md:text-base">Check out some of our recent projects..</p>
+        </div>
+
+        <div
+            class="mt-10 gallery-slider flex gap-4 overflow-x-auto slider pb-4 md:pb-0 md:grid md:gap-4 md:[grid-template-columns:repeat(auto-fit,minmax(160px,1fr))] md:overflow-visible">
+            
+        </div>
+        <div class="inline md:hidden text-center text-xs opacity-60 gallery-scroll-hint">Swipe to see more →</div>
+    </div>
+</section>
+
+<div id="gallery-lightbox" class="gallery-lightbox" aria-hidden="true" role="dialog" aria-label="Gallery image preview">
+    <button type="button" class="gallery-lightbox__close" aria-label="Close image preview">&times;</button>
+    <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--prev" aria-label="Previous image">
+        &#8592;
+    </button>
+    <img src="" alt="" class="gallery-lightbox__img" data-gallery-lightbox-img />
+    <button type="button" class="gallery-lightbox__nav gallery-lightbox__nav--next" aria-label="Next image">
+        &#8594;
+    </button>
+    <p class="gallery-lightbox__counter" data-gallery-lightbox-counter></p>
+</div>
+
+<script>
+    (function () {
+        if (window.__galleryLightboxInitialized) return;
+        window.__galleryLightboxInitialized = true;
+
+        const gallerySection = document.querySelector('#gallery');
+        if (!gallerySection) return;
+
+        const tiles = Array.from(gallerySection.querySelectorAll('[data-gallery-index]'));
+        if (!tiles.length) return;
+
+        const lightbox = document.getElementById('gallery-lightbox');
+        if (!lightbox) return;
+
+        const imgEl = lightbox.querySelector('[data-gallery-lightbox-img]');
+        const counterEl = lightbox.querySelector('[data-gallery-lightbox-counter]');
+        const closeBtn = lightbox.querySelector('.gallery-lightbox__close');
+        const prevBtn = lightbox.querySelector('.gallery-lightbox__nav--prev');
+        const nextBtn = lightbox.querySelector('.gallery-lightbox__nav--next');
+        if (!imgEl || !counterEl || !closeBtn || !prevBtn || !nextBtn) return;
+
+        let currentIndex = 0;
+
+        const updateLightbox = () => {
+            const activeTile = tiles[currentIndex];
+            if (!activeTile) return;
+            const src = activeTile.getAttribute('data-gallery-src') || activeTile.querySelector('img')?.src;
+            const alt = activeTile.getAttribute('data-gallery-alt') || activeTile.querySelector('img')?.alt || '';
+            if (src) {
+                imgEl.src = src;
+                imgEl.alt = alt;
+            }
+            counterEl.textContent = `${currentIndex + 1} / ${tiles.length}`;
+        };
+
+        const openLightbox = (index) => {
+            currentIndex = index;
+            updateLightbox();
+            lightbox.classList.add('is-active');
+            lightbox.setAttribute('aria-hidden', 'false');
+            document.body.classList.add('gallery-lightbox-open');
+        };
+
+        const closeLightbox = () => {
+            lightbox.classList.remove('is-active');
+            lightbox.setAttribute('aria-hidden', 'true');
+            document.body.classList.remove('gallery-lightbox-open');
+        };
+
+        const showPrev = () => {
+            currentIndex = (currentIndex - 1 + tiles.length) % tiles.length;
+            updateLightbox();
+        };
+
+        const showNext = () => {
+            currentIndex = (currentIndex + 1) % tiles.length;
+            updateLightbox();
+        };
+
+        tiles.forEach((tile, index) => {
+            tile.addEventListener('click', () => openLightbox(index));
+            tile.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    openLightbox(index);
+                }
+            });
+        });
+
+        closeBtn.addEventListener('click', closeLightbox);
+        prevBtn.addEventListener('click', showPrev);
+        nextBtn.addEventListener('click', showNext);
+        lightbox.addEventListener('click', (event) => {
+            const isImage = event.target === imgEl || event.target.closest('[data-gallery-lightbox-img]');
+            const isControl = event.target.closest('.gallery-lightbox__nav') || event.target.closest('.gallery-lightbox__close');
+            if (!isImage && !isControl) {
+                closeLightbox();
+            }
+        });
+
+        let touchStartX = 0;
+        let touchStartY = 0;
+        const swipeThreshold = 40;
+
+        lightbox.addEventListener('touchstart', (event) => {
+            if (!lightbox.classList.contains('is-active')) return;
+            const touch = event.touches[0];
+            if (!touch) return;
+            touchStartX = touch.clientX;
+            touchStartY = touch.clientY;
+        }, { passive: true });
+
+        lightbox.addEventListener('touchend', (event) => {
+            if (!lightbox.classList.contains('is-active')) return;
+            const touch = event.changedTouches[0];
+            if (!touch) return;
+            const deltaX = touch.clientX - touchStartX;
+            const deltaY = touch.clientY - touchStartY;
+            if (Math.abs(deltaX) < swipeThreshold || Math.abs(deltaX) < Math.abs(deltaY)) return;
+            if (deltaX > 0) {
+                showPrev();
+            } else {
+                showNext();
+            }
+        }, { passive: true });
+
+        document.addEventListener('keydown', (event) => {
+            if (!lightbox.classList.contains('is-active')) return;
+            if (event.key === 'Escape') closeLightbox();
+            if (event.key === 'ArrowLeft') showPrev();
+            if (event.key === 'ArrowRight') showNext();
+        });
+    })();
+</script>
+
+
+    <!-- ===========================
+         Testimonials
+    ============================ -->
+    <section id="testimonials" class="py-12 md:py-20 fade-in"
+        style="background: var(--color-bg); color: var(--color-text);">
+        <div class="max-w-6xl mx-auto px-4 lg:px-6">
+            <h2 class="text-3xl md:text-4xl font-bold mb-10 text-center">
+                Our Happy Customers
+            </h2>
+            <div class="max-w-5xl mx-auto">
+                
+        <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+          
+            <div class="rounded-3xl border border-gray-200/80 bg-white/90 backdrop-blur px-6 py-8 shadow-sm text-left">
+              <div class="flex text-[var(--color-primary)] text-base mb-4" aria-label="Five star review">
+                ★★★★★
+              </div>
+              <p class="text-gray-600 text-base leading-relaxed mb-5">“Fantastic job on my driveway! Highly recommend.”</p>
+              <div class="flex flex-wrap items-center gap-2 text-lg font-semibold text-gray-900">
+                <span class="inline-flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5" aria-hidden="true" focusable="false">
+            <path fill="#FFC107" d="M43.611 20.083H42.01V20H24v8h11.303a10.937 10.937 0 01-4.703 7.151l7.595 5.89C42.211 37.802 44.5 32.5 44.5 26c0-1.948-.193-3.843-.889-5.917z"/>
+            <path fill="#FF3D00" d="M24 44.5c6.085 0 11.177-2.015 14.903-5.456l-7.595-5.89a9.578 9.578 0 01-7.308 2.343c-5.605 0-10.374-3.783-12.072-8.888H3.66v5.563A20.497 20.497 0 0024 44.5z"/>
+            <path fill="#4CAF50" d="M11.928 26c-.78-2.355-.78-4.89 0-7.245V13.19H3.66a20.505 20.505 0 000 18.62l8.268-5.81z"/>
+            <path fill="#1976D2" d="M24 11.5c2.95-.045 5.795 1.072 7.89 3.113l5.867-5.867C33.695 4.438 28.99 2.431 24 2.5A20.485 20.485 0 003.66 13.19l8.268 5.81C14.626 13.896 19.395 10.114 24 10.114z"/>
+        </svg>
+                    <span>John Smith - Ipswich</span>
+                </span>
+              </div>
+            </div>
+            <div class="rounded-3xl border border-gray-200/80 bg-white/90 backdrop-blur px-6 py-8 shadow-sm text-left">
+              <div class="flex text-[var(--color-primary)] text-base mb-4" aria-label="Five star review">
+                ★★★★★
+              </div>
+              <p class="text-gray-600 text-base leading-relaxed mb-5">“My patio looks brand new! Great service.”</p>
+              <div class="flex flex-wrap items-center gap-2 text-lg font-semibold text-gray-900">
+                <span class="inline-flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5" aria-hidden="true" focusable="false">
+            <path fill="#FFC107" d="M43.611 20.083H42.01V20H24v8h11.303a10.937 10.937 0 01-4.703 7.151l7.595 5.89C42.211 37.802 44.5 32.5 44.5 26c0-1.948-.193-3.843-.889-5.917z"/>
+            <path fill="#FF3D00" d="M24 44.5c6.085 0 11.177-2.015 14.903-5.456l-7.595-5.89a9.578 9.578 0 01-7.308 2.343c-5.605 0-10.374-3.783-12.072-8.888H3.66v5.563A20.497 20.497 0 0024 44.5z"/>
+            <path fill="#4CAF50" d="M11.928 26c-.78-2.355-.78-4.89 0-7.245V13.19H3.66a20.505 20.505 0 000 18.62l8.268-5.81z"/>
+            <path fill="#1976D2" d="M24 11.5c2.95-.045 5.795 1.072 7.89 3.113l5.867-5.867C33.695 4.438 28.99 2.431 24 2.5A20.485 20.485 0 003.66 13.19l8.268 5.81C14.626 13.896 19.395 10.114 24 10.114z"/>
+        </svg>
+                    <span>Sarah Johnson - Springfield</span>
+                </span>
+              </div>
+            </div>
+            <div class="rounded-3xl border border-gray-200/80 bg-white/90 backdrop-blur px-6 py-8 shadow-sm text-left">
+              <div class="flex text-[var(--color-primary)] text-base mb-4" aria-label="Five star review">
+                ★★★★★
+              </div>
+              <p class="text-gray-600 text-base leading-relaxed mb-5">“Professional and friendly team. Will use again!”</p>
+              <div class="flex flex-wrap items-center gap-2 text-lg font-semibold text-gray-900">
+                <span class="inline-flex items-center gap-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" class="w-5 h-5" aria-hidden="true" focusable="false">
+            <path fill="#FFC107" d="M43.611 20.083H42.01V20H24v8h11.303a10.937 10.937 0 01-4.703 7.151l7.595 5.89C42.211 37.802 44.5 32.5 44.5 26c0-1.948-.193-3.843-.889-5.917z"/>
+            <path fill="#FF3D00" d="M24 44.5c6.085 0 11.177-2.015 14.903-5.456l-7.595-5.89a9.578 9.578 0 01-7.308 2.343c-5.605 0-10.374-3.783-12.072-8.888H3.66v5.563A20.497 20.497 0 0024 44.5z"/>
+            <path fill="#4CAF50" d="M11.928 26c-.78-2.355-.78-4.89 0-7.245V13.19H3.66a20.505 20.505 0 000 18.62l8.268-5.81z"/>
+            <path fill="#1976D2" d="M24 11.5c2.95-.045 5.795 1.072 7.89 3.113l5.867-5.867C33.695 4.438 28.99 2.431 24 2.5A20.485 20.485 0 003.66 13.19l8.268 5.81C14.626 13.896 19.395 10.114 24 10.114z"/>
+        </svg>
+                    <span>Michael Brown - Redbank Plains</span>
+                </span>
+              </div>
+            </div>
+        </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         Experience / Why Choose Us
+    ============================ -->
+    <section id="experience" class="py-12 md:py-20 fade-in"
+        style="background: var(--color-standout-bg); color: var(--color-standout-text);">
+        <div class="max-w-6xl mx-auto px-4 lg:px-6 grid md:grid-cols-2 gap-10 items-center">
+            <div>
+                <h2 class="text-3xl md:text-4xl mb-4" style="color: var(--color-primary);">
+                    Why Choose Us?
+                </h2>
+                <p class="mb-4 text-sm md:text-base leading-relaxed">
+                    We combine expertise, quality, and affordability to deliver the best pressure washing services.
+                </p>
+                <div class="text-sm md:text-base">
+                    <ul><li>Experienced and professional team</li><li>High-quality equipment and eco-friendly products</li><li>Competitive pricing and free quotes</li><li>Satisfaction guaranteed</li></ul>
+                </div>
+            </div>
+            Tru-Blue Pressure Washing is dedicated to providing exceptional service and results.
+        </div>
+    </section>
+
+    <!-- ===========================
+         CTA Band 
+    ============================ -->
+    <section class="relative py-14 md:py-16 text-center fade-in text-white bg-cover bg-center"
+        style="background-image: url('images/beautiful-driveway-2.jpg');">
+        <div class="absolute inset-0 bg-black/60">
+        </div>
+        <div class="relative z-10 max-w-4xl mx-auto px-4 lg:px-6">
+            <h2 class="text-2xl md:text-3xl font-bold mb-3">
+                Ready to Transform Your Space?
+            </h2>
+            <p class="text-base md:text-lg mb-6 opacity-95">
+                Contact us today for a free quote!
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="#contact"
+                    class="btn-outline font-semibold px-8 py-3 rounded-full text-sm md:text-base uppercase tracking-wide shadow-md bg-white text-[var(--color-primary)]">
+                    Get Quote
+                </a>
+                <a href="tel:0421 958 213"
+                    class="inline-flex items-center text-sm md:text-base font-medium text-white hover:opacity-80">
+                    <span
+                        class="mr-2 inline-flex h-9 w-9 items-center justify-center rounded-full border border-white/40 bg-white/5">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.518 4.554a1 1 0 01-.272 1.045l-2.12 2.12a16.001 16.001 0 007.07 7.07l2.12-2.12a1 1 0 011.045-.272l4.554 1.518a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C10.477 21 3 13.523 3 4V5z" />
+                        </svg>
+                    </span>
+                    <span>Or call 0421 958 213</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===========================
+         Contact
+    ============================ -->
+    <section id="contact" class="section-contact-form py-16 bg-[var(--color-bg-alt)] text-[var(--color-text)]">
+  <div class="max-w-6xl mx-auto px-4 lg:px-6">
+    <div class="section-contact-form__text grid gap-10 lg:items-start lg:grid-cols-2">
+      <div class="space-y-6">
+        <div>
+          <p class="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--color-primary)] mb-3">Get in touch</p>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 text-[var(--color-primary)]">
+            Ready to Transform Your Space?
+          </h2>
+          <p class="text-base leading-relaxed opacity-80">
+            Send us a message using the form, or reach out directly using the contact details.
+          </p>
+        </div>
+
+        <div class="space-y-4 text-sm md:text-base">
+          <div class="flex items-start gap-4">
+            <div class="rounded-full bg-[var(--color-primary)]/10 p-2 text-[var(--color-primary)]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M12 2.25c5.385 0 9.75 4.365 9.75 9.75S17.385 21.75 12 21.75 2.25 17.385 2.25 12 6.615 2.25 12 2.25z" />
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 7.5v4.5l3 3" />
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold uppercase tracking-wide text-xs opacity-70">Service area</p>
+              <p class="text-base font-medium">Ipswich, QLD, Australia</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="rounded-full bg-[var(--color-primary)]/10 p-2 text-[var(--color-primary)]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M22 5H16M16 5L19 2M16 5L19 8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M18.1182 14.702L14 15.5C11.2183 14.1038 9.5 12.5 8.5 10L9.26995 5.8699L7.81452 2L4.0636 2C2.93605 2 2.04814 2.93178 2.21654 4.04668C2.63695 6.83 3.87653 11.8765 7.5 15.5C11.3052 19.3052 16.7857 20.9564 19.802 21.6127C20.9668 21.8662 22 20.9575 22 19.7655L22 16.1812L18.1182 14.702Z"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold uppercase tracking-wide text-xs opacity-70">Phone</p>
+              <a href="tel:0421 958 213" class="text-base font-medium hover:text-[var(--color-primary)]">
+                0421 958 213
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-4">
+            <div class="rounded-full bg-[var(--color-primary)]/10 p-2 text-[var(--color-primary)]">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M9 9L13.5 12L18 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path d="M3 13.5H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path d="M1 10.5H5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round"></path>
+                <path
+                  d="M5 7.5V7C5 5.89543 5.89543 5 7 5H20C21.1046 5 22 5.89543 22 7V17C22 18.1046 21.1046 19 20 19H7C5.89543 19 5 18.1046 5 17V16.5"
+                  stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path>
+              </svg>
+            </div>
+            <div>
+              <p class="font-semibold uppercase tracking-wide text-xs opacity-70">Email</p>
+              <a href="mailto:trubluepressurewashing@gmail.com" class="text-base font-medium hover:text-[var(--color-primary)]">
+                trubluepressurewashing@gmail.com
+              </a>
+            </div>
+          </div>
+
+          <blockquote class="border-l-4 border-[var(--color-primary)]/40 pl-4 italic text-sm opacity-70">
+            Contact us today for a free quote!
+          </blockquote>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 border border-gray-100">
+        <form action="https://formsubmit.co/trubluepressurewashing@gmail.com" method="POST" enctype="multipart/form-data" class="space-y-4">
+          <input type="hidden" name="_subject" value="New enquiry for Tru-Blue Pressure Washing" />
+          <input type="hidden" name="_autoresponse" value="Thanks for reaching out to Tru-Blue Pressure Washing. We'll be in touch shortly." />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_blacklist" value="click here, lose weight, viagra, risk free, free money, act now, earn extra cash, work from home, double your, meet singles, no obligation, limited time, winner, urgent response needed, cheap meds, investment opportunity, claim your prize, get rich quick, miracle cure, credit repair, online pharmacy, lottery, lonely housewives, best price, $$" />
+          <input type="hidden" name="_next" value="/thank-you.html">
+          <input type="text" name="_honey" style="display:none">
+          <div class="grid md:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs uppercase tracking-wide text-gray-500 mb-1">First name*</label>
+              <input type="text" name="firstName" required
+                class="w-full rounded-md border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+                placeholder="First Name" />
+            </div>
+            <div>
+              <label class="block text-xs uppercase tracking-wide text-gray-500 mb-1">Last name</label>
+              <input type="text" name="lastName"
+                class="w-full rounded-md border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+                placeholder="Last Name" />
+            </div>
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide text-gray-500 mb-1">Email address*</label>
+            <input type="email" name="email" required
+              class="w-full rounded-md border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+              placeholder="Email Address" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide text-gray-500 mb-1">Suburb</label>
+            <input type="text" name="suburb"
+              class="w-full rounded-md border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+              placeholder="Suburb" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide text-gray-500 mb-1">Phone</label>
+            <input type="tel" name="phone"
+              class="w-full rounded-md border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+              placeholder="Phone Number" />
+          </div>
+          <div style="display: none;">
+            <label class="block text-xs uppercase tracking-wide text-gray-500 mb-1">Upload photos of your job</label>
+            <input type="file" name="attachment"
+              class="w-full rounded-md border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none" />
+          </div>
+          <div>
+            <label class="block text-xs uppercase tracking-wide text-gray-500 mb-1">How can we help?</label>
+            <textarea name="message" rows="4"
+              class="w-full rounded-md border border-gray-200 px-3 py-2 focus:ring-2 focus:ring-[var(--color-primary)] focus:outline-none"
+              placeholder="Tell us about your project"></textarea>
+          </div>
+          <button type="submit"
+            class="w-full bg-[var(--color-primary)] text-white font-semibold uppercase tracking-wide py-3 rounded-md shadow hover:opacity-90 transition">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- ===========================
+         Footer
+    ============================ -->
+<footer class="py-10 md:py-16" style="background: var(--color-footer); color: var(--color-footer-text);">
+    <div class="max-w-6xl mx-auto px-4 lg:px-6 grid md:grid-cols-3 gap-10">
+        <div class="md:col-span-2">
+            <h3 class="text-xl font-bold mb-4">Tru-Blue Pressure Washing</h3>
+            <p class="text-sm md:text-base mb-4">
+                At Tru-Blue Pressure Washing, we pride ourselves on delivering high-quality pressure washing services at competitive prices. Our team is dedicated to making your property shine, whether it's your home, driveway, or patio. Servicing Ipswich and surrounding suburbs, we are your local experts.
+            </p>
+            <div class="flex gap-3 mt-3">
+      <a
+        href="https://www.facebook.com/profile.php?id=61584757976419"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="inline-flex items-center justify-center p-2 rounded-full bg-[var(--color-primary)] transition"
+      >
+      <svg class="w-6 h-6 text-white transition" stroke-width="1" viewBox="0 0 24 24" fill="transparent" xmlns="http://www.w3.org/2000/svg" color="currentColor"><path d="M17 2H14C12.6739 2 11.4021 2.52678 10.4645 3.46447C9.52678 4.40215 9 5.67392 9 7V10H6V14H9V22H13V14H16L17 10H13V7C13 6.73478 13.1054 6.48043 13.2929 6.29289C13.4804 6.10536 13.7348 6 14 6H17V2Z" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+
+        <span class="sr-only">Facebook</span>
+      </a>
+    </div>
+        </div>
+        <div>
+            <h4 class="text-lg font-semibold mb-3">Contact</h4>
+            <p class="text-sm md:text-base mb-1">
+                Phone:
+                <a href="tel:0421 958 213" class="hover:underline">
+                    0421 958 213
+                </a>
+            </p>
+            <p class="text-sm md:text-base mb-1">
+                Email:
+                <a href="mailto:trubluepressurewashing@gmail.com" class="hover:underline">
+                    trubluepressurewashing@gmail.com
+                </a>
+            </p>
+            <p class="text-sm md:text-base">Servicing: Ipswich, QLD, Australia</p>
+        </div>
+    </div>
+    <div class="text-center text-xs md:text-sm mt-10 border-t border-gray-700/60 pt-6">
+        © 2026 Tru-Blue Pressure Washing | ABN 12 345 678 910<br>Made with ❤️ by <a href="https://tradekick.com.au" target="_blank">TradeKick</a>
+    </div>
+</footer>
+
+<!-- Floating Call Button (Mobile) -->
+<a href="tel:0421 958 213" class="fixed bottom-5 right-5 btn-primary shadow-lg rounded-full p-4 md:hidden z-50"
+    aria-label="Call Now">
+    <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.518 4.554a1 1 0 01-.272 1.045l-2.12 2.12a16.001 16.001 0 007.07 7.07l2.12-2.12a1 1 0 011.045-.272l4.554 1.518a1 1 0 01.684.948V19a2 2 0 01-2 2h-1C10.477 21 3 13.523 3 4V5z" />
+    </svg>
+</a>
+
+    <!-- ===========================
+         Scripts (fade-in + nav highlight)
+    ============================ -->
+    <script>
+        // Fade-in observer
+        const visObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add('visible');
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.fade-in').forEach(el => visObserver.observe(el));
+
+        // Nav active state observer
+        const sections = document.querySelectorAll("section[id]");
+        const navLinks = document.querySelectorAll("nav a[href^='#']");
+
+        const navObserver = new IntersectionObserver(
+            entries => {
+                entries.forEach(entry => {
+                    const id = entry.target.getAttribute("id");
+                    const link = document.querySelector(`nav a[href="#${id}"]`);
+                    if (!link) return;
+
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => link.classList.remove("nav-underline-thick"));
+                        link.classList.add("nav-underline-thick");
+                    }
+                });
+            },
+            { rootMargin: "-50% 0px -50% 0px", threshold: 0 }
+        );
+
+        sections.forEach(section => navObserver.observe(section));
+    </script>
+</body>
+
+</html>
